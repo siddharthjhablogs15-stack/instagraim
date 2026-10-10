@@ -1,301 +1,212 @@
-import {
-  Search,
-  Play,
-  Eye,
-  ArrowRight,
-  Facebook,
-  Instagram,
-  Twitter,
-} from "lucide-react";
 
-export default function Home() {
-  const categories = [
-    "Tech",
-    "Entertainment",
-    "Sports",
-    "Finance",
-    "Food",
-    "Travel",
-    "Beauty",
-    "Education",
-    "Health",
-  ];
-
-  const stories = Array.from({ length: 8 });
-
-  return (
-    <div className="min-h-screen bg-[#faf8ff]">
-
-      {/* Navbar */}
-      <nav className="sticky top-0 bg-white/80 backdrop-blur-lg shadow-sm z-50">
-        <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-
-          <div className="text-3xl font-bold text-violet-700">
-            StoryHub
-          </div>
-
-          <div className="hidden md:flex gap-8 font-medium">
-            <a href="#">Home</a>
-            <a href="#">Trending</a>
-            <a href="#">Categories</a>
-            <a href="#">Submit Story</a>
-          </div>
-
-          <div className="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2">
-            <Search size={18}/>
-            <input
-              className="bg-transparent outline-none ml-2"
-              placeholder="Search Stories..."
-            />
-          </div>
-
-        </div>
-      </nav>
-
-      {/* Hero */}
-      <section className="bg-gradient-to-r from-violet-700 via-purple-600 to-pink-500 text-white">
-
-        <div className="max-w-7xl mx-auto py-24 px-6">
-
-          <h1 className="text-5xl font-bold mb-5">
-            भारत की सबसे बड़ी <br />
-            Story Community 🚀
-          </h1>
-
-          <p className="text-lg opacity-90 mb-8 max-w-xl">
-            Read inspiring stories, trending news,
-            motivational journeys and publish your own story.
-          </p>
-
-          <button className="bg-white text-violet-700 px-8 py-4 rounded-full font-semibold hover:scale-105 transition">
-            Explore Stories
-          </button>
-
-        </div>
-      </section>
-
-      {/* Categories */}
-      <section className="py-8 overflow-x-auto">
-        <div className="flex gap-4 px-6 w-max">
-
-          {categories.map((cat)=>(
-            <button
-              key={cat}
-              className="bg-violet-100 hover:bg-violet-600 hover:text-white transition px-5 py-2 rounded-full"
-            >
-              {cat}
-            </button>
-          ))}
-
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6 px-6 py-8">
-
-        {[
-          ["12K+","Stories"],
-          ["5M+","Views"],
-          ["800+","Authors"],
-          ["50+","Categories"]
-        ].map(([num,title])=>(
-
-          <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
-            <h2 className="text-4xl font-bold text-violet-700">{num}</h2>
-            <p className="mt-2 text-gray-500">{title}</p>
-          </div>
-
-        ))}
-
-      </section>
-
-      {/* Trending */}
-
-      <section className="py-12">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold">
-              🔥 Trending Stories
-            </h2>
-
-            <ArrowRight/>
-          </div>
-
-          <div className="flex gap-6 overflow-x-auto pb-4">
-
-            {[1,2,3,4,5].map((item)=>(
-
-              <div
-                key={item}
-                className="min-w-[330px] rounded-3xl text-white p-8 bg-gradient-to-br from-violet-600 to-pink-500 relative hover:scale-105 transition"
-              >
-
-                <span className="bg-white/20 px-3 py-1 rounded-full text-sm">
-                  Trending
-                </span>
-
-                <h3 className="mt-5 text-2xl font-bold">
-                  Amazing Success Story #{item}
-                </h3>
-
-                <div className="flex justify-between mt-8">
-
-                  <div className="flex items-center gap-2">
-                    <Eye size={18}/>
-                    98K
-                  </div>
-
-                  <Play/>
-                </div>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* Featured CTA */}
-
-      <section className="max-w-6xl mx-auto px-6">
-
-        <div className="rounded-[40px] bg-gradient-to-r from-purple-700 to-pink-600 text-white p-16 text-center">
-
-          <h2 className="text-4xl font-bold">
-            ✍️ अपनी Story Publish करें
-          </h2>
-
-          <p className="mt-5 opacity-90">
-            लाखों लोगों तक अपनी कहानी पहुँचाएँ।
-          </p>
-
-          <button className="mt-8 bg-white text-violet-700 px-8 py-4 rounded-full font-bold">
-            Submit Story
-          </button>
-
-        </div>
-
-      </section>
-
-      {/* Latest Stories */}
-
-      <section className="max-w-7xl mx-auto px-6 py-20">
-
-        <h2 className="text-4xl font-bold mb-10">
-          📖 Latest Stories
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-8">
-
-          {stories.map((_,i)=>(
-
-            <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
-
-              <div className="h-52 bg-gradient-to-br from-violet-400 to-pink-400 relative">
-
-                <div className="absolute inset-0 flex justify-center items-center">
-                  <Play className="text-white" size={50}/>
-                </div>
-
-              </div>
-
-              <div className="p-5">
-
-                <span className="bg-violet-100 text-violet-700 text-sm px-3 py-1 rounded-full">
-                  Tech
-                </span>
-
-                <h3 className="font-bold mt-4">
-                  Story Title #{i+1}
-                </h3>
-
-                <div className="flex gap-2 mt-4 flex-wrap">
-
-                  <span className="bg-gray-100 px-3 py-1 rounded-full text-xs">
-                    AI
-                  </span>
-
-                  <span className="bg-gray-100 px-3 py-1 rounded-full text-xs">
-                    Startup
-                  </span>
-
-                </div>
-
-                <div className="flex items-center mt-5 text-gray-500 gap-2">
-                  <Eye size={16}/>
-                  12.5K Views
-                </div>
-
-              </div>
-
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Instagraim.in - India's #1 Web Stories Platform. Trending stories, viral content aur engaging visuals.">
+    <meta name="keywords" content="web stories, hindi stories, trending, viral, instagraim">
+    <meta name="author" content="Instagraim.in">
+    <title>Instagraim.in — Web Stories Ka Naya Anubhav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">insta<span>graim</span>.in</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">🏠 Home</a>
+                <a href="#trending">🔥 Trending</a>
+                <a href="#categories">📂 Categories</a>
+                <a href="#submit">📝 Submit Story</a>
             </div>
-
-          ))}
-
-        </div>
-
-      </section>
-
-      {/* Footer */}
-
-      <footer className="bg-violet-900 text-white py-16">
-
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
-
-          <div>
-
-            <h3 className="text-2xl font-bold">
-              StoryHub
-            </h3>
-
-            <p className="opacity-70 mt-3">
-              India's fastest growing story platform.
-            </p>
-
-          </div>
-
-          <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
-            <p>Home</p>
-            <p>Trending</p>
-            <p>Categories</p>
-            <p>About</p>
-          </div>
-
-          <div>
-            <h4 className="font-bold mb-4">Support</h4>
-            <p>Privacy Policy</p>
-            <p>Terms</p>
-            <p>Contact</p>
-          </div>
-
-          <div>
-
-            <h4 className="font-bold mb-4">
-              Follow Us
-            </h4>
-
-            <div className="flex gap-5">
-              <Facebook/>
-              <Instagram/>
-              <Twitter/>
+            <div class="nav-right">
+                <div class="search-box" id="searchBox">
+                    <input type="text" id="searchInput" placeholder="Search stories..." autocomplete="off">
+                    <button class="search-btn" id="searchBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </button>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-
-          </div>
-
         </div>
+    </nav>
 
-        <div className="text-center opacity-60 mt-12">
-          © 2026 StoryHub • Made with ❤️ in India
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>📖 Web Stories Ka Naya Anubhav</h1>
+            <p>Trending stories, viral content aur engaging visuals — sab ek jagah. Padhein, dekhein aur share karein!</p>
+            <a href="#stories" class="hero-btn">🚀 Explore Stories</a>
         </div>
+        <div class="hero-particles" id="heroParticles"></div>
+    </section>
 
-      </footer>
+    <!-- ===== STATS BAR ===== -->
+    <section class="stats-bar" id="statsBar">
+        <div class="stat-card">
+            <div class="stat-num" data-target="12000">0</div>
+            <div class="stat-label">Stories</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num" data-target="5000000">0</div>
+            <div class="stat-label">Views</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num" data-target="800">0</div>
+            <div class="stat-label">Authors</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num" data-target="50">0</div>
+            <div class="stat-label">Categories</div>
+        </div>
+    </section>
 
-    </div>
-  );
-}
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories-section" id="categories">
+        <div class="categories-scroll">
+            <button class="cat-pill active" data-category="all">🔥 All</button>
+            <button class="cat-pill" data-category="tech">💻 Tech</button>
+            <button class="cat-pill" data-category="entertainment">🎬 Entertainment</button>
+            <button class="cat-pill" data-category="sports">🏏 Sports</button>
+            <button class="cat-pill" data-category="finance">💰 Finance</button>
+            <button class="cat-pill" data-category="food">🍔 Food</button>
+            <button class="cat-pill" data-category="travel">✈️ Travel</button>
+            <button class="cat-pill" data-category="beauty">💄 Beauty</button>
+            <button class="cat-pill" data-category="education">📚 Education</button>
+            <button class="cat-pill" data-category="health">🏥 Health</button>
+        </div>
+    </section>
+
+    <!-- ===== TRENDING STORIES (Horizontal Scroll) ===== -->
+    <section class="section" id="trending">
+        <div class="section-header">
+            <h2>🔥 Trending Stories</h2>
+            <a href="#" class="see-all">See All →</a>
+        </div>
+        <div class="trending-scroll" id="trendingScroll">
+            <div class="trending-card" data-category="tech" style="--card-bg: linear-gradient(180deg, #f97316, #ea580c);">
+                <div class="tc-icon">📱</div>
+                <div class="tc-content">
+                    <div class="tc-title">iPhone 18 Launch Date Revealed!</div>
+                    <div class="tc-views">👁 2.3M views</div>
+                </div>
+                <div class="tc-ring"></div>
+            </div>
+            <div class="trending-card" data-category="sports" style="--card-bg: linear-gradient(180deg, #06b6d4, #0891b2);">
+                <div class="tc-icon">🏏</div>
+                <div class="tc-content">
+                    <div class="tc-title">IPL 2027 Mega Auction Updates</div>
+                    <div class="tc-views">👁 1.8M views</div>
+                </div>
+                <div class="tc-ring"></div>
+            </div>
+            <div class="trending-card" data-category="entertainment" style="--card-bg: linear-gradient(180deg, #ec4899, #db2777);">
+                <div class="tc-icon">🎬</div>
+                <div class="tc-content">
+                    <div class="tc-title">Pushpa 3 Teaser Out Now!</div>
+                    <div class="tc-views">👁 3.1M views</div>
+                </div>
+                <div class="tc-ring"></div>
+            </div>
+            <div class="trending-card" data-category="finance" style="--card-bg: linear-gradient(180deg, #10b981, #059669);">
+                <div class="tc-icon">💰</div>
+                <div class="tc-content">
+                    <div class="tc-title">Sensex Crosses 1 Lakh Mark</div>
+                    <div class="tc-views">👁 950K views</div>
+                </div>
+                <div class="tc-ring"></div>
+            </div>
+            <div class="trending-card" data-category="tech" style="--card-bg: linear-gradient(180deg, #8b5cf6, #7c3aed);">
+                <div class="tc-icon">🚀</div>
+                <div class="tc-content">
+                    <div class="tc-title">ISRO Moon Mission 2027</div>
+                    <div class="tc-views">👁 1.2M views</div>
+                </div>
+                <div class="tc-ring"></div>
+            </div>
+            <div class="trending-card" data-category="food" style="--card-bg: linear-gradient(180deg, #f43f5e, #e11d48);">
+                <div class="tc-icon">🍔</div>
+                <div class="tc-content">
+                    <div class="tc-title">Top 10 Street Food in India</div>
+                    <div class="tc-views">👁 780K views</div>
+                </div>
+                <div class="tc-ring"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED BANNER ===== -->
+    <section class="featured-banner" id="submit">
+        <div class="fb-text">
+            <h3>✍️ Apni Story Publish Karein!</h3>
+            <p>instagraim.in par apni Web Story banayein aur lakhon readers tak pahunchein. Free mein shuru karein!</p>
+            <a href="#" class="fb-btn">Start Writing →</a>
+        </div>
+        <div class="fb-emoji">✨</div>
+    </section>
+
+    <!-- ===== LATEST STORIES GRID ===== -->
+    <section class="section" id="stories">
+        <div class="section-header">
+            <h2>📰 Latest Stories</h2>
+            <a href="#" class="see-all">See All →</a>
+        </div>
+        <div class="stories-grid" id="storiesGrid">
+            <!-- Stories will be loaded by JavaScript -->
+        </div>
+        <div class="load-more-wrap">
+            <button class="load-more-btn" id="loadMoreBtn">Load More Stories ↓</button>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter">
+        <h3>📬 Daily Stories Apne Inbox Mein Paayein!</h3>
+        <p>Subscribe karein aur roz ki trending stories seedha email par paayein.</p>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email..." required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="newsletter-msg" id="newsletterMsg"></div>
+    </section>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="f-logo">insta<span>graim</span>.in</div>
+            <p class="f-tagline">India's #1 Web Stories Platform — Padhein, Dekhein, Share Karein!</p>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Advertise</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+                <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+                <a href="#" class="social-icon" aria-label="Pinterest">📌</a>
+            </div>
+            <p class="f-copyright">© 2026 instagraim.in — All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

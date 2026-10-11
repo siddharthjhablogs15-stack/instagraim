@@ -1,0 +1,54 @@
+
+# ============================================
+# INSTAGRAIM.IN — ROBOTS.TXT
+# ============================================
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow admin and internal paths
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /*.json$
+Disallow: /search?
+
+# Allow CSS, JS, and images for rendering
+Allow: /style.css
+Allow: /script.js
+Allow: /assets/
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Block AI scrapers (optional — remove if you want AI indexing)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Sitemap location
+Sitemap: https://instagraim.in/sitemap.xml
+

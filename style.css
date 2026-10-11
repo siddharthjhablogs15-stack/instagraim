@@ -966,4 +966,147 @@ img {
   }
 }
 
+/* ============================================
+   INSTAGRAIM.IN — SEO & PERFORMANCE CSS
+   Add these to your existing style.css
+   ============================================ */
+
+/* ===== CRITICAL: Image Optimization ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  content-visibility: auto;
+}
+
+/* Lazy loading placeholder */
+img[loading="lazy"] {
+  background: linear-gradient(135deg, #1a1a2e, #2a2a3e);
+  min-height: 200px;
+}
+
+/* ===== SKIP TO CONTENT (Accessibility + SEO) ===== */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-blue);
+  color: var(--text-white);
+  padding: 12px 24px;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ===== VISUALLY HIDDEN (Screen Readers Only) ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== FOCUS STYLES (Accessibility) ===== */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ===== REDUCED MOTION (Accessibility) ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .story-card:hover {
+    transform: none;
+  }
+}
+
+/* ===== PRINT STYLES (SEO Friendly) ===== */
+@media print {
+  .header,
+  .menu-toggle,
+  .mobile-nav,
+  .hero-overlay,
+  .hero-buttons,
+  .footer-social,
+  .btn-primary,
+  .btn-outline {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  .story-card {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+  }
+}
+
+/* ===== CONTENT VISIBILITY (Performance) ===== */
+.category-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+.legal-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+  :root {
+    --border: rgba(255, 255, 255, 0.3);
+    --text-secondary: #D4D4D8;
+    --text-muted: #A1A1AA;
+  }
+
+  .story-card {
+    border-width: 2px;
+  }
+}
+
+
 

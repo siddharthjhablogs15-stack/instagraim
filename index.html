@@ -1,212 +1,495 @@
 
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Instagraim.in - India's #1 Web Stories Platform. Trending stories, viral content aur engaging visuals.">
-    <meta name="keywords" content="web stories, hindi stories, trending, viral, instagraim">
-    <meta name="author" content="Instagraim.in">
-    <title>Instagraim.in — Web Stories Ka Naya Anubhav</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>instagraim.in — Quick Stories. Big Moments. Visual First.</title>
+  <meta name="description" content="Your daily hub for fast-loading visual web stories, breaking sports analysis, trending lifestyle galleries, and global headlines." />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="logo">insta<span>graim</span>.in</div>
-            <div class="nav-links" id="navLinks">
-                <a href="#home">🏠 Home</a>
-                <a href="#trending">🔥 Trending</a>
-                <a href="#categories">📂 Categories</a>
-                <a href="#submit">📝 Submit Story</a>
-            </div>
-            <div class="nav-right">
-                <div class="search-box" id="searchBox">
-                    <input type="text" id="searchInput" placeholder="Search stories..." autocomplete="off">
-                    <button class="search-btn" id="searchBtn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </button>
-                </div>
-                <button class="hamburger" id="hamburger">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">instagraim<span>.in</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cricket">Cricket</a></li>
+          <li><a href="#football">Football</a></li>
+          <li><a href="#nba">NBA</a></li>
+          <li><a href="#spotlight">Spotlight</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#home">Home</a>
+      <a href="#cricket">Cricket</a>
+      <a href="#football">Football</a>
+      <a href="#nba">NBA</a>
+      <a href="#spotlight">Spotlight</a>
+      <a href="#news">News</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>📖 Web Stories Ka Naya Anubhav</h1>
-            <p>Trending stories, viral content aur engaging visuals — sab ek jagah. Padhein, dekhein aur share karein!</p>
-            <a href="#stories" class="hero-btn">🚀 Explore Stories</a>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Quick Stories. Big Moments. Visual First.</p>
+      <h1>Your Daily Hub for<br /><span class="highlight">Visual Web Stories</span></h1>
+      <p class="hero-desc">Breaking sports analysis, trending lifestyle galleries, and global headlines — built for mobile readers who want crisp, engaging news.</p>
+      <div class="hero-buttons">
+        <a href="#cricket" class="btn-primary">Explore Stories</a>
+        <a href="#about" class="btn-outline">Know More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Categories</span>
         </div>
-        <div class="hero-particles" id="heroParticles"></div>
-    </section>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">Updates</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Visual First</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== STATS BAR ===== -->
-    <section class="stats-bar" id="statsBar">
-        <div class="stat-card">
-            <div class="stat-num" data-target="12000">0</div>
-            <div class="stat-label">Stories</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-num" data-target="5000000">0</div>
-            <div class="stat-label">Views</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-num" data-target="800">0</div>
-            <div class="stat-label">Authors</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-num" data-target="50">0</div>
-            <div class="stat-label">Categories</div>
-        </div>
-    </section>
+  <!-- ===== CATEGORY SECTIONS ===== -->
 
-    <!-- ===== CATEGORIES ===== -->
-    <section class="categories-section" id="categories">
-        <div class="categories-scroll">
-            <button class="cat-pill active" data-category="all">🔥 All</button>
-            <button class="cat-pill" data-category="tech">💻 Tech</button>
-            <button class="cat-pill" data-category="entertainment">🎬 Entertainment</button>
-            <button class="cat-pill" data-category="sports">🏏 Sports</button>
-            <button class="cat-pill" data-category="finance">💰 Finance</button>
-            <button class="cat-pill" data-category="food">🍔 Food</button>
-            <button class="cat-pill" data-category="travel">✈️ Travel</button>
-            <button class="cat-pill" data-category="beauty">💄 Beauty</button>
-            <button class="cat-pill" data-category="education">📚 Education</button>
-            <button class="cat-pill" data-category="health">🏥 Health</button>
+  <!-- CRICKET -->
+  <section class="category-section" id="cricket">
+    <div class="container">
+      <div class="category-header">
+        <div class="category-badge cricket-badge">🏏 Cricket</div>
+        <h2 class="category-title">22 Yards &amp; Beyond</h2>
+        <p class="category-desc">Live scores, viral on-field clashes, tournament brackets, and quick-read cricket web stories.</p>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card featured">
+          <div class="story-img" data-label="LIVE">
+            <div class="story-placeholder">[ Cricket Match Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag cricket-tag">IPL 2026</span>
+            <h3>IPL Final: A Thrilling Run Chase Under Lights</h3>
+            <p>The stadium erupted as the final over delivered a nail-biting finish. Full story inside.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
         </div>
-    </section>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Player Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag cricket-tag">Performance</span>
+            <h3>Top 5 Performers of the Tournament</h3>
+            <p>Key players who dominated with bat and ball this season.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Fixtures Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag cricket-tag">Fixtures</span>
+            <h3>Upcoming International Schedule 2026</h3>
+            <p>Complete fixtures, venues and timings for the next series.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== TRENDING STORIES (Horizontal Scroll) ===== -->
-    <section class="section" id="trending">
-        <div class="section-header">
-            <h2>🔥 Trending Stories</h2>
-            <a href="#" class="see-all">See All →</a>
+  <!-- FOOTBALL -->
+  <section class="category-section alt-bg" id="football">
+    <div class="container">
+      <div class="category-header">
+        <div class="category-badge football-badge">⚽ Football</div>
+        <h2 class="category-title">The Beautiful Game</h2>
+        <p class="category-desc">Transfer leaks, European night highlights, and tactical breakdowns delivered slide-by-slide.</p>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card featured">
+          <div class="story-img" data-label="TRENDING">
+            <div class="story-placeholder">[ Football Match Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag football-tag">Champions League</span>
+            <h3>UCL Semi-Final: Drama in Extra Time</h3>
+            <p>A last-minute goal sends shockwaves through European football.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
         </div>
-        <div class="trending-scroll" id="trendingScroll">
-            <div class="trending-card" data-category="tech" style="--card-bg: linear-gradient(180deg, #f97316, #ea580c);">
-                <div class="tc-icon">📱</div>
-                <div class="tc-content">
-                    <div class="tc-title">iPhone 18 Launch Date Revealed!</div>
-                    <div class="tc-views">👁 2.3M views</div>
-                </div>
-                <div class="tc-ring"></div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Transfer Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag football-tag">Transfers</span>
+            <h3>Summer Transfer Window: Top 10 Deals</h3>
+            <p>The biggest moves shaping next season's title race.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Premier League Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag football-tag">Premier League</span>
+            <h3>Matchday Recap: Goals, Cards &amp; Controversy</h3>
+            <p>Everything you missed from this weekend's Premier League action.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NBA -->
+  <section class="category-section" id="nba">
+    <div class="container">
+      <div class="category-header">
+        <div class="category-badge nba-badge">🏀 NBA</div>
+        <h2 class="category-title">Hardwood Chronicles</h2>
+        <p class="category-desc">Buzzer beaters, ankle-breakers, MVP races, and locker room updates from across the league.</p>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card featured">
+          <div class="story-img" data-label="HIGHLIGHTS">
+            <div class="story-placeholder">[ NBA Game Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag nba-tag">Playoffs</span>
+            <h3>Playoff Showdown: Game 7 Goes to the Wire</h3>
+            <p>An overtime classic that will be remembered for decades.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Player Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag nba-tag">MVP Race</span>
+            <h3>MVP Tracker: Who's Leading the Pack?</h3>
+            <p>Statistical breakdown of this season's top contenders.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Trade Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag nba-tag">Trades</span>
+            <h3>Trade Deadline: Blockbuster Deals Confirmed</h3>
+            <p>The moves that could reshape the championship landscape.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPOTLIGHT & VISUALS -->
+  <section class="category-section alt-bg" id="spotlight">
+    <div class="container">
+      <div class="category-header">
+        <div class="category-badge spotlight-badge">📸 Spotlight</div>
+        <h2 class="category-title">Visual Stories &amp; Style Trends</h2>
+        <p class="category-desc">Curated photography, trending social aesthetics, and model features in full-screen vertical stories.</p>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card featured">
+          <div class="story-img" data-label="VIRAL">
+            <div class="story-placeholder">[ Fashion Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag spotlight-tag">Fashion</span>
+            <h3>Top 10 Trending Looks This Season</h3>
+            <p>From runway to reels — the styles dominating social feeds right now.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Influencer Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag spotlight-tag">Influencer</span>
+            <h3>Creators to Watch: Rising Stars of 2026</h3>
+            <p>The new wave of digital creators making waves online.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Aesthetic Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag spotlight-tag">Aesthetic</span>
+            <h3>Visual Aesthetic Gallery: Minimalist Vibes</h3>
+            <p>A curated collection of clean, minimal visual inspiration.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY NEWS -->
+  <section class="category-section" id="news">
+    <div class="container">
+      <div class="category-header">
+        <div class="category-badge news-badge">🔥 Trending</div>
+        <h2 class="category-title">Viral Headlines</h2>
+        <p class="category-desc">Pop culture moments, tech announcements, and global stories making waves today.</p>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card featured">
+          <div class="story-img" data-label="BREAKING">
+            <div class="story-placeholder">[ News Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag news-tag">Entertainment</span>
+            <h3>The Biggest Entertainment Moments This Week</h3>
+            <p>From surprise album drops to viral movie trailers — here's what trended.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Tech Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag news-tag">Technology</span>
+            <h3>Tech Roundup: Gadgets That Stole the Show</h3>
+            <p>The latest launches and innovations making headlines.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-img">
+            <div class="story-placeholder">[ Viral Image ]</div>
+          </div>
+          <div class="story-body">
+            <span class="story-tag news-tag">Viral</span>
+            <h3>Internet's Best: Stories That Broke the Feed</h3>
+            <p>The most shared, liked and talked-about moments online.</p>
+            <a href="#" class="read-more">Read Story →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="section-label">About Us</p>
+          <h2 class="about-title">About instagraim.in</h2>
+          <p class="about-tagline">Quick Stories. Big Moments. Visual First.</p>
+          <p>Welcome to instagraim.in, your daily hub for fast-loading visual web stories, breaking sports analysis, trending lifestyle galleries, and global headlines. We build content for mobile readers who want crisp, engaging news without walls of text.</p>
+        </div>
+        <div class="about-right">
+          <div class="about-card">
+            <h4>🏏 Cricket</h4>
+            <p>Real-time match updates, IPL coverage, tournament fixtures, and key player performances.</p>
+          </div>
+          <div class="about-card">
+            <h4>⚽ Football</h4>
+            <p>Transfer market buzz, UEFA Champions League, Premier League, and matchday drama.</p>
+          </div>
+          <div class="about-card">
+            <h4>🏀 NBA</h4>
+            <p>Game highlights, court action, trade updates, and playoff stories.</p>
+          </div>
+          <div class="about-card">
+            <h4>📸 Spotlight &amp; Lifestyle</h4>
+            <p>Curated photo stories, viral influencer trends, fashion spotlights, and visual aesthetic galleries.</p>
+          </div>
+          <div class="about-card">
+            <h4>🔥 Trending News</h4>
+            <p>Entertainment scoops, viral internet stories, and technology highlights.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-block">
+        <h3>Our Mission</h3>
+        <p>We transform heavy news articles into snappy, dynamic web stories that give you the core update in seconds. Whether you are following a cricket run-chase or exploring trending fashion, instagraim.in keeps you ahead of the feed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIVACY POLICY ===== -->
+  <section class="legal-section" id="privacy">
+    <div class="container">
+      <p class="section-label">Legal</p>
+      <h2 class="legal-title">Privacy Policy</h2>
+      <p class="legal-date">Effective Date: October 2026</p>
+      <div class="legal-content">
+        <p>At instagraim.in, visitor privacy is a fundamental standard. This policy details how data is managed when you browse our platform.</p>
+
+        <div class="legal-block">
+          <h4>Information We Collect Automatically</h4>
+          <p>Like most digital publications, we use standard server logs and analytics tools. This includes browser types, referring pages, IP addresses, internet service providers (ISPs), and time-stamped activity to assess overall site health and traffic flows.</p>
+        </div>
+
+        <div class="legal-block">
+          <h4>Cookies &amp; Tracking</h4>
+          <p>We use cookies to save reader preferences and optimize page rendering speeds for mobile devices.</p>
+        </div>
+
+        <div class="legal-block">
+          <h4>Advertising &amp; Third-Party Partners</h4>
+          <p>Third-party networks (including Google AdSense) may deploy cookies (such as the DART cookie) to display relevant ads based on browsing history across various websites. Users can manage or disable targeted cookies via browser controls or external opt-out portals like AboutAds.info.</p>
+        </div>
+
+        <div class="legal-block">
+          <h4>Social Media &amp; Outbound Links</h4>
+          <p>Our web stories contain direct links to Instagram, Facebook, and external sources. instagraim.in does not regulate or accept liability for third-party privacy policies.</p>
+        </div>
+
+        <div class="legal-block">
+          <h4>Contact Support</h4>
+          <p>For inquiries regarding our privacy standards, write to <a href="mailto:contact@instagraim.in">contact@instagraim.in</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DISCLAIMER ===== -->
+  <section class="legal-section alt-bg" id="disclaimer">
+    <div class="container">
+      <h2 class="legal-title">Disclaimer</h2>
+      <div class="legal-content">
+        <div class="legal-block">
+          <h4>General Information</h4>
+          <p>All articles, scores, news summaries, and web stories on instagraim.in are published in good faith for general information, entertainment, and sports reporting purposes.</p>
+        </div>
+
+        <div class="legal-block">
+          <h4>Media &amp; Copyright Attribution</h4>
+          <p>Images, trademarks, club logos, and player likenesses displayed in our web stories belong entirely to their respective copyright holders. instagraim.in utilizes media under fair reporting and transformative review standards. If you are the owner of any visual asset and wish to update attribution or request removal, email us at <a href="mailto:contact@instagraim.in">contact@instagraim.in</a> and we will process the request promptly.</p>
+        </div>
+
+        <div class="legal-block">
+          <h4>Accuracy of Live Information</h4>
+          <p>Fast-paced sports statistics, match scores, and breaking rumors are subject to real-time adjustments. We make no unconditional warranties regarding the absolute precision of developing stories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="contact-title">Got a Tip, Feedback, or Collaboration Request?</h2>
+        <p class="contact-desc">We love hearing from our readers and digital storytellers.</p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h4>Editorial Inquiries</h4>
+            <a href="mailto:editor@instagraim.in">editor@instagraim.in</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h4>General Support</h4>
+            <a href="mailto:contact@instagraim.in">contact@instagraim.in</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📱</div>
+            <h4>Social Media</h4>
+            <div class="social-links">
+              <a href="https://instagram.com/talessspin" target="_blank" rel="noopener">Instagram @talessspin</a>
+              <a href="#" target="_blank" rel="noopener">Facebook Page</a>
             </div>
-            <div class="trending-card" data-category="sports" style="--card-bg: linear-gradient(180deg, #06b6d4, #0891b2);">
-                <div class="tc-icon">🏏</div>
-                <div class="tc-content">
-                    <div class="tc-title">IPL 2027 Mega Auction Updates</div>
-                    <div class="tc-views">👁 1.8M views</div>
-                </div>
-                <div class="tc-ring"></div>
-            </div>
-            <div class="trending-card" data-category="entertainment" style="--card-bg: linear-gradient(180deg, #ec4899, #db2777);">
-                <div class="tc-icon">🎬</div>
-                <div class="tc-content">
-                    <div class="tc-title">Pushpa 3 Teaser Out Now!</div>
-                    <div class="tc-views">👁 3.1M views</div>
-                </div>
-                <div class="tc-ring"></div>
-            </div>
-            <div class="trending-card" data-category="finance" style="--card-bg: linear-gradient(180deg, #10b981, #059669);">
-                <div class="tc-icon">💰</div>
-                <div class="tc-content">
-                    <div class="tc-title">Sensex Crosses 1 Lakh Mark</div>
-                    <div class="tc-views">👁 950K views</div>
-                </div>
-                <div class="tc-ring"></div>
-            </div>
-            <div class="trending-card" data-category="tech" style="--card-bg: linear-gradient(180deg, #8b5cf6, #7c3aed);">
-                <div class="tc-icon">🚀</div>
-                <div class="tc-content">
-                    <div class="tc-title">ISRO Moon Mission 2027</div>
-                    <div class="tc-views">👁 1.2M views</div>
-                </div>
-                <div class="tc-ring"></div>
-            </div>
-            <div class="trending-card" data-category="food" style="--card-bg: linear-gradient(180deg, #f43f5e, #e11d48);">
-                <div class="tc-icon">🍔</div>
-                <div class="tc-content">
-                    <div class="tc-title">Top 10 Street Food in India</div>
-                    <div class="tc-views">👁 780K views</div>
-                </div>
-                <div class="tc-ring"></div>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== FEATURED BANNER ===== -->
-    <section class="featured-banner" id="submit">
-        <div class="fb-text">
-            <h3>✍️ Apni Story Publish Karein!</h3>
-            <p>instagraim.in par apni Web Story banayein aur lakhon readers tak pahunchein. Free mein shuru karein!</p>
-            <a href="#" class="fb-btn">Start Writing →</a>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">instagraim<span>.in</span></div>
+        <p>Quick Stories. Big Moments. Visual First.<br />Your daily hub for visual web stories and breaking updates.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/talessspin" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
         </div>
-        <div class="fb-emoji">✨</div>
-    </section>
+      </div>
+      <div>
+        <h5>Categories</h5>
+        <ul class="footer-links">
+          <li><a href="#cricket">Cricket</a></li>
+          <li><a href="#football">Football</a></li>
+          <li><a href="#nba">NBA</a></li>
+          <li><a href="#spotlight">Spotlight &amp; Visuals</a></li>
+          <li><a href="#news">Trending News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#disclaimer">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul class="footer-links">
+          <li><a href="mailto:contact@instagraim.in">contact@instagraim.in</a></li>
+          <li><a href="mailto:editor@instagraim.in">editor@instagraim.in</a></li>
+          <li><a href="https://instagram.com/talessspin" target="_blank" rel="noopener">@talessspin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 instagraim.in — All rights reserved. | Tales Spin</p>
+      <div class="footer-legal">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#disclaimer">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
 
-    <!-- ===== LATEST STORIES GRID ===== -->
-    <section class="section" id="stories">
-        <div class="section-header">
-            <h2>📰 Latest Stories</h2>
-            <a href="#" class="see-all">See All →</a>
-        </div>
-        <div class="stories-grid" id="storiesGrid">
-            <!-- Stories will be loaded by JavaScript -->
-        </div>
-        <div class="load-more-wrap">
-            <button class="load-more-btn" id="loadMoreBtn">Load More Stories ↓</button>
-        </div>
-    </section>
-
-    <!-- ===== NEWSLETTER ===== -->
-    <section class="newsletter">
-        <h3>📬 Daily Stories Apne Inbox Mein Paayein!</h3>
-        <p>Subscribe karein aur roz ki trending stories seedha email par paayein.</p>
-        <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="Enter your email..." required>
-            <button type="submit">Subscribe</button>
-        </form>
-        <div class="newsletter-msg" id="newsletterMsg"></div>
-    </section>
-
-    <!-- ===== BACK TO TOP ===== -->
-    <button class="back-to-top" id="backToTop">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-    </button>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="f-logo">insta<span>graim</span>.in</div>
-            <p class="f-tagline">India's #1 Web Stories Platform — Padhein, Dekhein, Share Karein!</p>
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Advertise</a>
-                <a href="#">Sitemap</a>
-            </div>
-            <div class="footer-social">
-                <a href="#" class="social-icon" aria-label="Facebook">📘</a>
-                <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
-                <a href="#" class="social-icon" aria-label="Instagram">📸</a>
-                <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
-                <a href="#" class="social-icon" aria-label="Pinterest">📌</a>
-            </div>
-            <p class="f-copyright">© 2026 instagraim.in — All Rights Reserved</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
 
 

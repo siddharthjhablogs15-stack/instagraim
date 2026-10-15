@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>Instagraim.in - Hot Images & Live News | Latest Trending Photos & Breaking News</title>
+    <meta name="description" content="Instagraim.in - देखें सबसे हॉट ट्रेंडिंग इमेजेस और लाइव ब्रेकिंग न्यूज़। Latest hot images, viral photos, live news updates, trending pictures, entertainment news हिंदी में।">
+    <meta name="keywords" content="hot images, live news, trending photos, viral images, breaking news, latest news hindi, entertainment news, bollywood images, trending pictures, instagraim, hot pics, live updates, news today, today news hindi, viral photos 2026, celebrity photos, lifestyle images, fashion images, sports news, technology news">
+    <meta name="author" content="Instagraim.in">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="Hindi">
+    <meta name="revisit-after" content="1 days">
+    <meta name="rating" content="general">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://instagraim.in/">
+    <meta property="og:title" content="Instagraim.in - Hot Images & Live News">
+    <meta property="og:description" content="देखें सबसे हॉट ट्रेंडिंग इमेजेस और लाइव ब्रेकिंग न्यूज़। Latest trending photos & breaking news updates.">
+    <meta property="og:image" content="https://instagraim.in/images/og-banner.jpg">
+    <meta property="og:locale" content="hi_IN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://instagraim.in/">
+    <meta name="twitter:title" content="Instagraim.in - Hot Images & Live News">
+    <meta name="twitter:description" content="देखें सबसे हॉट ट्रेंडिंग इमेजेस और लाइव ब्रेकिंग न्यूज़।">
+    <meta name="twitter:image" content="https://instagraim.in/images/og-banner.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://instagraim.in/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Instagraim.in",
+        "url": "https://instagraim.in/",
+        "description": "Hot Images & Live News - Latest Trending Photos & Breaking News",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://instagraim.in/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ========== TOP BAR ========== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-calendar-alt"></i> <span id="current-date"></span></span>
+                <span class="separator">|</span>
+                <span><i class="fas fa-bolt"></i> Trending Now</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HEADER / NAVBAR ========== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <h1>Insta<span>graim</span>.in</h1>
+                    <p class="tagline">Hot Images & Live News</p>
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#hot-images"><i class="fas fa-fire"></i> Hot Images</a></li>
+                    <li><a href="#live-news"><i class="fas fa-newspaper"></i> Live News</a></li>
+                    <li><a href="#trending"><i class="fas fa-chart-line"></i> Trending</a></li>
+                    <li><a href="#entertainment"><i class="fas fa-film"></i> Entertainment</a></li>
+                    <li><a href="#sports"><i class="fas fa-futbol"></i> Sports</a></li>
+                    <li><a href="#technology"><i class="fas fa-laptop"></i> Technology</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== BREAKING NEWS TICKER ========== -->
+    <div class="news-ticker">
+        <div class="container">
+            <span class="ticker-label"><i class="fas fa-bolt"></i> Breaking News</span>
+            <div class="ticker-wrapper">
+                <div class="ticker-content" id="tickerContent">
+                    <span>🔥 ताज़ा खबर: आज की सबसे बड़ी ब्रेकिंग न्यूज़ यहाँ देखें</span>
+                    <span>📸 वायरल फोटोज़: इंटरनेट पर धूम मचा रही हैं ये तस्वीरें</span>
+                    <span>⚡ लाइव अपडेट: हर पल की खबर सबसे पहले Instagraim.in पर</span>
+                    <span>🏏 स्पोर्ट्स: आज के मैच की लाइव अपडेट</span>
+                    <span>🎬 एंटरटेनमेंट: बॉलीवुड की ताज़ा खबरें</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <div class="hero-card">
+                        <img src="https://via.placeholder.com/800x500/e74c3c/ffffff?text=Featured+Image" alt="Featured Hot Image - Trending Today" loading="lazy">
+                        <div class="hero-overlay">
+                            <span class="category-badge hot">🔥 Hot</span>
+                            <h2>आज की सबसे ट्रेंडिंग इमेज - देखें क्या हो रहा है वायरल</h2>
+                            <p class="meta"><i class="fas fa-clock"></i> 2 घंटे पहले <span class="separator">|</span> <i class="fas fa-eye"></i> 15.2K Views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-sidebar">
+                    <div class="hero-card small">
+                        <img src="https://via.placeholder.com/400x250/3498db/ffffff?text=Live+News" alt="Live Breaking News Update" loading="lazy">
+                        <div class="hero-overlay">
+                            <span class="category-badge live"><i class="fas fa-circle blink"></i> Live</span>
+                            <h3>ब्रेकिंग न्यूज़: ताज़ा अपडेट</h3>
+                        </div>
+                    </div>
+                    <div class="hero-card small">
+                        <img src="https://via.placeholder.com/400x250/2ecc71/ffffff?text=Trending" alt="Trending Viral Photos" loading="lazy">
+                        <div class="hero-overlay">
+                            <span class="category-badge trending">📈 Trending</span>
+                            <h3>वायरल फोटोज़ जो तोड़ रही हैं रिकॉर्ड</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOT IMAGES SECTION ========== -->
+    <section class="section" id="hot-images">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-fire"></i> Hot Images</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="entertainment">Entertainment</button>
+                <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+            </div>
+            <div class="image-grid" id="imageGrid">
+                <!-- Image Card 1 -->
+                <article class="image-card" data-category="entertainment">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x300/e74c3c/ffffff?text=Hot+Image+1" alt="Hot Trending Image 1 - Entertainment" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="category-badge hot">🔥 Hot</span>
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>एंटरटेनमेंट की दुनिया से ताज़ा तस्वीर</h3>
+                        <p class="meta"><i class="fas fa-clock"></i> 1 घंटा पहले <span class="dot">•</span> <i class="fas fa-eye"></i> 8.5K</p>
+                    </div>
+                </article>
+                <!-- Image Card 2 -->
+                <article class="image-card" data-category="lifestyle">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x300/9b59b6/ffffff?text=Hot+Image+2" alt="Hot Trending Image 2 - Lifestyle" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="category-badge hot">🔥 Hot</span>
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>लाइफस्टाइल: ट्रेंडिंग फोटो गैलरी</h3>
+                        <p class="meta"><i class="fas fa-clock"></i> 3 घंटे पहले <span class="dot">•</span> <i class="fas fa-eye"></i> 12.1K</p>
+                    </div>
+                </article>
+                <!-- Image Card 3 -->
+                <article class="image-card" data-category="fashion">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x300/f39c12/ffffff?text=Hot+Image+3" alt="Hot Trending Image 3 - Fashion" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="category-badge hot">🔥 Hot</span>
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>फैशन वर्ल्ड की सबसे हॉट तस्वीरें</h3>
+                        <p class="meta"><i class="fas fa-clock"></i> 5 घंटे पहले <span class="dot">•</span> <i class="fas fa-eye"></i> 6.3K</p>
+                    </div>
+                </article>
+                <!-- Image Card 4 -->
+                <article class="image-card" data-category="nature">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x300/1abc9c/ffffff?text=Hot+Image+4" alt="Hot Trending Image 4 - Nature" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="category-badge hot">🔥 Hot</span>
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>प्रकृति की अद्भुत तस्वीरें - वायरल</h3>
+                        <p class="meta"><i class="fas fa-clock"></i> 6 घंटे पहले <span class="dot">•</span> <i class="fas fa-eye"></i> 9.7K</p>
+                    </div>
+                </article>
+                <!-- Image Card 5 -->
+                <article class="image-card" data-category="entertainment">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x300/e67e22/ffffff?text=Hot+Image+5" alt="Hot Trending Image 5 - Bollywood" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="category-badge hot">🔥 Hot</span>
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>बॉलीवुड सेलेब्स की लेटेस्ट फोटोज़</h3>
+                        <p class="meta"><i class="fas fa-clock"></i> 8 घंटे पहले <span class="dot">•</span> <i class="fas fa-eye"></i> 18.4K</p>
+                    </div>
+                </article>
+                <!-- Image Card 6 -->
+                <article class="image-card" data-category="lifestyle">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Hot+Image+6" alt="Hot Trending Image 6 - Travel" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="category-badge hot">🔥 Hot</span>
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>ट्रैवल फोटोग्राफी: बेस्ट डेस्टिनेशन</h3>
+                        <p class="meta"><i class="fas fa-clock"></i> 10 घंटे पहले <span class="dot">•</span> <i class="fas fa-eye"></i> 7.2K</p>
+                    </div>
+                </article>
+            </div>
+            <div class="load-more">
+                <button class="btn-load-more" id="loadMoreImages">Load More Images <i class="fas fa-spinner"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LIVE NEWS SECTION ========== -->
+    <section class="section section-dark" id="live-news">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-newspaper"></i> Live News <span class="live-dot blink"></span></h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="news-grid">
+                <!-- News Card 1 -->
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Breaking+News" alt="Breaking News - Live Update" loading="lazy">
+                        <span class="category-badge live"><i class="fas fa-circle blink"></i> LIVE</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">ब्रेकिंग न्यूज़</span>
+                        <h3>आज की सबसे बड़ी खबर - लाइव अपडेट जारी</h3>
+                        <p>यह आज की सबसे बड़ी ब्रेकिंग न्यूज़ है। पूरी डिटेल के लिए क्लिक करें और पढ़ें ताज़ा अपडेट...</p>
+                        <div class="news-meta">
+                            <span><i class="fas fa-user"></i> Admin</span>
+                            <span><i class="fas fa-clock"></i> 30 मिनट पहले</span>
+                            <span><i class="fas fa-comments"></i> 45 Comments</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- News Card 2 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://via.placeholder.com/400x250/2980b9/ffffff?text=Politics+News" alt="Politics News Update" loading="lazy">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">राजनीति</span>
+                        <h3>राजनीतिक हलचल: आज के बड़े अपडेट</h3>
+                        <p>राजनीति की दुनिया से ताज़ा खबरें...</p>
+                        <div class="news-meta">
+                            <span><i class="fas fa-clock"></i> 1 घंटा पहले</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- News Card 3 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://via.placeholder.com/400x250/27ae60/ffffff?text=Sports+News" alt="Sports News Live" loading="lazy">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">स्पोर्ट्स</span>
+                        <h3>खेल जगत: आज के मैच के नतीजे</h3>
+                        <p>स्पोर्ट्स की दुनिया से लाइव अपडेट...</p>
+                        <div class="news-meta">
+                            <span><i class="fas fa-clock"></i> 2 घंटे पहले</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- News Card 4 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://via.placeholder.com/400x250/8e44ad/ffffff?text=Tech+News" alt="Technology News Update" loading="lazy">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">टेक्नोलॉजी</span>
+                        <h3>टेक वर्ल्ड: नई टेक्नोलॉजी अपडेट</h3>
+                        <p>टेक्नोलॉजी की दुनिया से ताज़ा खबरें...</p>
+                        <div class="news-meta">
+                            <span><i class="fas fa-clock"></i> 3 घंटे पहले</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- News Card 5 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://via.placeholder.com/400x250/d35400/ffffff?text=Entertainment" alt="Entertainment News" loading="lazy">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">मनोरंजन</span>
+                        <h3>बॉलीवुड: फिल्मी दुनिया की ताज़ा खबरें</h3>
+                        <p>एंटरटेनमेंट की दुनिया से हॉट न्यूज़...</p>
+                        <div class="news-meta">
+                            <span><i class="fas fa-clock"></i> 4 घंटे पहले</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TRENDING SECTION ========== -->
+    <section class="section" id="trending">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Trending Now</h2>
+            </div>
+            <div class="trending-grid">
+                <div class="trending-item">
+                    <span class="trending-number">01</span>
+                    <div class="trending-info">
+                        <h4>वायरल वीडियो ने तोड़े सारे रिकॉर्ड</h4>
+                        <p><i class="fas fa-fire"></i> 25.6K Views</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <span class="trending-number">02</span>
+                    <div class="trending-info">
+                        <h4>सोशल मीडिया पर छाई ये तस्वीर</h4>
+                        <p><i class="fas fa-fire"></i> 19.3K Views</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <span class="trending-number">03</span>
+                    <div class="trending-info">
+                        <h4>ब्रेकिंग: बड़ी खबर अभी-अभी आई</h4>
+                        <p><i class="fas fa-fire"></i> 14.8K Views</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <span class="trending-number">04</span>
+                    <div class="trending-info">
+                        <h4>सेलेब्रिटी की ये फोटो हुई वायरल</h4>
+                        <p><i class="fas fa-fire"></i> 11.2K Views</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <span class="trending-number">05</span>
+                    <div class="trending-info">
+                        <h4>टेक्नोलॉजी: नया गैजेट लॉन्च</h4>
+                        <p><i class="fas fa-fire"></i> 9.5K Views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER SECTION ========== -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2><i class="fas fa-envelope"></i> न्यूज़लेटर सब्सक्राइब करें</h2>
+                <p>ताज़ा खबरें और हॉट इमेजेस सीधे अपने ईमेल पर पाएं!</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="अपना ईमेल दर्ज करें..." required>
+                    <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Insta<span>graim</span>.in</h3>
+                    <p>आपका भरोसेमंद प्लेटफॉर्म - Hot Images और Live News के लिए। हम लाते हैं आपके लिए सबसे ताज़ा और ट्रेंडिंग कंटेंट।</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#hot-images">Hot Images</a></li>
+                        <li><a href="#live-news">Live News</a></li>
+                        <li><a href="#trending">Trending</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Lifestyle</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@instagraim.in</li>
+                        <li><i class="fas fa-globe"></i> www.instagraim.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Instagraim.in | All Rights Reserved | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Disclaimer</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+
+# ========== ENABLE REWRITE ENGINE ==========
+RewriteEngine On
+
+# ========== FORCE HTTPS ==========
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ========== FORCE WWW TO NON-WWW (ya non-www to www - ek choose karo) ==========
+RewriteCond %{HTTP_HOST} ^www\.instagraim\.in [NC]
+RewriteRule ^(.*)$ https://instagraim.in/$1 [L,R=301]
+
+# ========== CLEAN URL FOR ARTICLE 370 POST ==========
+RewriteRule ^article-370-removal-complete-story$ /article-370.html [L]
+
+# ========== REMOVE .HTML EXTENSION ==========
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# ========== CACHING (Speed Optimization - SEO Ranking Factor) ==========
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# ========== GZIP COMPRESSION (Page Speed Boost) ==========
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ========== SECURITY HEADERS ==========
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ========== CUSTOM ERROR PAGES ==========
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+

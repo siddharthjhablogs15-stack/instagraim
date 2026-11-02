@@ -15,3 +15,8 @@ Upload `index.html`, `robots.txt` and `sitemap.xml` to the root of any static we
 - Username brainstorming with copyable suggestions
 
 The hashtag and username tools make local suggestions. They do not check live trends, account availability or Instagram data.
+- Username brainstorming with copyable suggestions
+- Direct public PDF link downloader (source sites must permit browser access)
+- Image resizer and JPG, PNG, WebP converter with local quality controls
+
+The hashtag and username tools make local suggestions. They do not check live trends, account availability or Instagram data. Image resizing runs locally in the browser. The PDF downloader fetches the public URL directly, so some hosts may block it with their browser security settings.
